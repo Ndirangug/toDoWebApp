@@ -1,0 +1,101 @@
+.register{
+    width:50%;
+    margin:auto;
+    border:0.2em solid rgb(0, 60, 78);
+    padding: 2em;
+}
+
+.wrapper{
+    padding-top: 7em;
+}
+
+th, td, label{
+    font-size: 0.9em;
+}
+table{
+    width:100%;
+}
+th{
+    padding: 1em;
+}
+
+#register_inset{
+    width:5.5em;
+    height:5.5em;
+    position:absolute;
+    left: 42em;
+    top:6em;
+    border:0.2em solid rgb(0, 60, 78);
+}
+
+.error{
+    color: red;
+}
+.success{
+    color: green;
+}
+
+.header-dashboard{
+    padding:2em;
+    background-color: green;
+    color: goldenrod;
+}
+
+.header-dashboard h1{
+    display: inline;
+}
+
+.details_pane{
+    padding: 2em;
+    box-shadow: rgba(0, 53, 0, 0.685) 0 10px 10px 10px ;
+}
+
+.details_pane h4{
+    margin: 1em;
+}
+
+.details_pane h1{
+    font-size: 7em;
+}
+
+.details_pane hr{
+    border: solid green 0.1em;
+}
+
+.btn-default{
+    background-color: rgb(35, 182, 35);
+    color: gold;
+}
+.tasks-header{
+    padding: 2em;
+}
+.tasks-header .form-control{
+    width:70%;
+    display: inline;
+}
+
+.navbar-right input{
+    display: inline;
+}
+
+.task-search{
+    width:60%;
+}
+
+.tasks-header button{
+    border:none;
+    background-color: white;
+    display: inline;
+}
+
+.task{
+    font-size: 2em;
+}
+.task-space{
+    padding: 0 4em 0 4em;
+}
+
+.task a{
+    margin-left: 1em;
+    font-size: 0.8em;
+}
