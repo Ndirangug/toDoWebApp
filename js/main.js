@@ -1,0 +1,1 @@
+document.getElementById("empty").addEventListener("load", document.getElementById("searchResult").style.display = "block");

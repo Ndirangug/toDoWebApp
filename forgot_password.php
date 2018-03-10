@@ -1,5 +1,6 @@
 <?php
     include("includes/connection.php");
+    session_start();
     
 ?>
 <!DOCTYPE html>
@@ -41,7 +42,7 @@
                                         <input class="form-control" type="phone" placeholder="phone number" name="phone" id="phone" required>
                                     </div>
                                 </div>
-                                <input type="submit" value="GET PASSWORD" class="btn btn-info btn-md" name="get_password" >
+                                <input type="submit" value="GET PASSWORD RESET LINK" class="btn btn-info btn-md" name="get_password" >
                             </form>
                         </td>
                     </tr>
@@ -71,8 +72,8 @@
     
     if (mysqli_num_rows($selectResult) > 0) {
         $record = mysqli_fetch_assoc($selectResult); 
-        
-       echo "Hey $username, here is your password: ".$record['password'];
+        $_SESSION['user'] = $username;
+       echo "Hey $username, here is your password reset link <a href='resetPasswordLoggedOut.php'>hugydfewfnwised3435fhkmxko2384937</a>";
     }
 
     else{
@@ -80,6 +81,6 @@
     }
 
     }
-
+session_write_close();
    
 ?>
