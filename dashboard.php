@@ -7,7 +7,7 @@
     $query = "SELECT * FROM tasks WHERE userID = '$_SESSION[id]'";
     $selectResult = mysqli_query($conn, $query);
     while ($row = mysqli_fetch_assoc($selectResult)) {
-        echo "<div class='task'><a href='dashboard.php?complete=true'><input href='dashboard.php?complete=true' class='counted' type='checkbox' name=".$row['id']." ></a><span class='task-text'> ".$row['task']. "</span>  <span class='complete-status'<h6>Complete</h6></span> <span class='navbar-right'><a href='dashboard.php?edit=$row[id]'><i class='fa fa-edit'></i></a> <a href='dashboard.php?delete=$row[id]'><i class='fa fa-trash'></i></a></span></div>";
+        echo "<div class='task'><input  class='counted' type='checkbox' name=".$row['id']." ><span class='task-text'> ".ucfirst($row['task']). "</span>   <span class='navbar-right'><a href='dashboard.php?edit=$row[id]'><i class='fa fa-edit'></i></a> <a href='dashboard.php?delete=$row[id]'><i class='fa fa-trash'></i></a></span></div>";
 
     }
     }
@@ -113,7 +113,7 @@
     <link rel="stylesheet" href="bootstrap/fontawesome/css/fontawesome-all.css">
     <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css">
-    <script src="bootstrap/angular/angular.js"></script>
+    
    
     
 </head>
@@ -150,7 +150,7 @@
                     <?php showTasks();?>
                 </div></div>
                 
-                <div ng-app="complete" ng-controller="completetasks" class="row"><div class="col-md-12"><h4>Tasks completed: {{tasks}} </h4></div></div>
+                <div ng-app="complete" ng-controller="completetasks" class="row"><div class="col-md-12"><h4 id="complete"> </h4></div></div>
                 <div id="searchResult">
                    <!-- Modal -->
                     <div id='searchModal'  role='dialog'>
@@ -182,18 +182,23 @@
     
     <script>
         
+
         
-        var checkedOnes = document.getElementsByClassName("checked");
-        var number = checkedOnes.length;
+       
+        var number = 0;
 
-        var app = angular.module("complete", []); 
-        app.controller('completetasks', function ($scope) {
+         $(".counted").change(function () {
+                var checked = $(":checked");
+                number = checked.length;
+               
+                $("#complete").html("Tasks Completed: " + number);
+                
+            });
+        
 
-            $scope.tasks = number;
-        }
-    );    
-    
-     
+      
+   
+   
     
     $(".close").click(function(){
         $("#searchResult").hide();
