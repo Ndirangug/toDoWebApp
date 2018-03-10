@@ -12,18 +12,21 @@
     <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="whole">
     
     <div class="wrapper">
+       
         <img src="images/register_inset.jpg" id="register_inset" class="img-responsive img-circle" alt="">
         <div class="register img-rounded">
             <table>
                 <thead>
+                    <tr>
                     <th class="text-center">To Do App</th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="navbar-right">Already Registered?<a href="login.php">Log In </a>here</td>
+                        <td class="navbar-right">Already Registered? <a href="login.php"> Log In </a> here</td>
                     </tr>
                     <tr>
                         <td>
@@ -59,6 +62,7 @@
                 </tbody>
             </table>
         </div>
+
     </div>
 
     <script src="bootstrap/js/jquery.js"></script>

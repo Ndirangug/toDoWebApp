@@ -14,11 +14,11 @@
     <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class='wrapper-body'>
     
-    <div class="wrapper">
+    <div class="wrapper-forgot">
         <img src="images/error-circle.png" id="register_inset" class="img-responsive img-circle" alt="">
-        <div class="register img-rounded">
+        <div class="register-forgot img-rounded">
             <table>
                 <thead>
                     <th class="text-center">Password Recovery</th>
@@ -49,17 +49,9 @@
                     <tr>
                         <td><a href="login.php">Log In</a></td>
                     </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <script src="bootstrap/js/jquery.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
-</body>
-</html>
-
-<?php
+                    <tr>
+                        <td>
+                        <?php
 
 
     if (isset($_POST['get_password'])) {
@@ -73,6 +65,7 @@
     if (mysqli_num_rows($selectResult) > 0) {
         $record = mysqli_fetch_assoc($selectResult); 
         $_SESSION['user'] = $username;
+    
        echo "Hey $username, here is your password reset link <a href='resetPasswordLoggedOut.php'>hugydfewfnwised3435fhkmxko2384937</a>";
     }
 
@@ -83,4 +76,16 @@
     }
 session_write_close();
    
-?>
+?></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
+
+

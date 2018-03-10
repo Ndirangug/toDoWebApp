@@ -24,8 +24,12 @@ th{
     height:5.5em;
     position:absolute;
     left: 42em;
-    top:6em;
+    top:5.8em;
     border:0.2em solid rgb(0, 60, 78);
+}
+
+.wrapper-forgot #register_inset{
+    top:2.8em;
 }
 
 .error{
@@ -37,17 +41,21 @@ th{
 
 .header-dashboard{
     padding:2em;
-    background-color: green;
-    color: goldenrod;
+    background-color:rgb(0, 60, 78);
+    color: white;
+}
+.header-dashboard a{
+    color:rgb(81, 214, 255);
 }
 
 .header-dashboard h1{
     display: inline;
+    font-weight: 900;
 }
 
 .details_pane{
     padding: 2em;
-    box-shadow: rgba(0, 53, 0, 0.685) 0 10px 10px 10px ;
+    box-shadow: rgba(0, 60, 78, 0.678) 0 10px 10px 10px ;
 }
 
 .details_pane h4{
@@ -59,12 +67,12 @@ th{
 }
 
 .details_pane hr{
-    border: solid green 0.1em;
+    border: solid rgb(0, 60, 78) 0.1em;
 }
 
 .btn-default{
-    background-color: rgb(35, 182, 35);
-    color: gold;
+    background-color:  rgb(0, 60, 78);
+    color:white;
 }
 .tasks-header{
     padding: 2em;
@@ -105,8 +113,14 @@ th{
     margin:auto;
     border:0.2em solid rgb(0, 60, 78);
     padding: 2em;
+    background-color: rgba(129, 161, 161, 0.347);
 }
 
+#edit-body{
+    background-image: url("../images/recover.jpg");
+    background-attachment: fixed;
+    
+}
 
 
 .searchinput .form-control{
@@ -130,11 +144,105 @@ th{
 
 #searchResult{
     display: none;
+    position: absolute;
+    top:4em;
+    left:10em;
+    
 }
 
-.wrapper{
+.whole{
     width:100%;
     height:100%;
     background-image: url("../images/office.jpeg");
     background-size: cover;
+    background-attachment: fixed;
+}
+
+.wrapper, .wrapper-forgot{
+    background-color: rgba(0, 0, 0, 0.838);
+    width:100%;
+    height: 100%;
+}
+
+.register thead, .register-forgot thead{
+    background-color: rgb(0, 60, 78);
+     height: 3em;
+     padding: 2em;
+}
+
+.register, .register-forgot{
+    padding: 0;
+}
+.register table, .register-forgot table{
+    width:100%;
+    
+}
+
+.register table tr td, .register-forgot table tr td{
+    padding:1em 2em 1em 2em;
+}
+
+.register table thead th, .register-forgot table thead th{
+    
+    color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+   
+}
+
+.register table tbody, .register-forgot table tbody{
+    background-color: rgba(129, 161, 161, 0.747);
+    color: rgba(255, 255, 255, 0.849);
+}
+
+.register table tbody a, .register-forgot table tbody a{
+    color: rgb(1, 60, 75);
+}
+
+.register table tbody a:hover, .register-forgot table tbody a:hover,  .register-forgot table tbody a:hover,  .register table tbody a:active, .register table tbody a:focus, .register-forgot table tbody a:active{
+    color:   rgb(133, 184, 197);
+    font-weight: 700;
+}
+
+.register-forgot{
+    width:60%;
+    margin:2em auto auto auto;
+    border:rgb(0, 60, 78) solid 0.2em;
+}
+
+
+.wrapper-body{
+    width:100%;
+    height: 100%;
+    background-image: url("../images/padlock.jpg");
+    background-attachment: fixed;
+}
+
+.wrapper-forgot{
+    padding-top: 2em;
+}
+
+.tint{
+     background-color: rgba(0, 0, 0, 0.808);
+     height:100%;
+     padding-top: 8em;
+}
+
+#dashboard_link:active, #dashboard_link:hover, #dashboard_link:focus{
+    text-decoration: none;
+}
+
+.modal-content{
+     -webkit-box-shadow: 0 15px 35px rgba(0, 60, 78, 0.9);
+            box-shadow: 0 15px 35px rgba(0, 60, 78, 0.9);
+}
+
+.img-rounded{
+    border-radius: 10px;
+}
+
+.complete-status{
+    font-size:0.4em;
+    color:rgb(1, 60, 75);
+    display: none;
 }

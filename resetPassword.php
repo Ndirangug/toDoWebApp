@@ -8,17 +8,17 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Forgot Password</title>
+    <title>Reset Password</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap/fontawesome/css/fontawesome-all.css">
     <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="wrapper-body">
     
-    <div class="wrapper">
+    <div class="wrapper-forgot">
         <img src="images/error-circle.png" id="register_inset" class="img-responsive img-circle" alt="">
-        <div class="register img-rounded">
+        <div class="register-forgot img-rounded">
             <table>
                 <thead>
                     <th class="text-center">Reset</th>

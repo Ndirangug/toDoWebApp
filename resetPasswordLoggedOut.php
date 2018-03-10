@@ -14,11 +14,11 @@
     <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="wrapper-body">
     
-    <div class="wrapper">
+    <div class="wrapper-forgot">
         <img src="images/error-circle.png" id="register_inset" class="img-responsive img-circle" alt="">
-        <div class="register img-rounded">
+        <div class="register-forgot img-rounded">
             <table>
                 <thead>
                     <th class="text-center">Reset</th>

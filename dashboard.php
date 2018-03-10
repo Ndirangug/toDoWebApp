@@ -7,7 +7,7 @@
     $query = "SELECT * FROM tasks WHERE userID = '$_SESSION[id]'";
     $selectResult = mysqli_query($conn, $query);
     while ($row = mysqli_fetch_assoc($selectResult)) {
-        echo "<div class='task'><a href='dashboard.php?complete=true'><input href='dashboard.php?complete=true' class='counted' type='checkbox' name=".$row['id']." ></a><span class='task-text'> ".$row['task']. "</span> <span class='navbar-right'><a href='dashboard.php?edit=$row[id]'><i class='fa fa-edit'></i></a> <a href='dashboard.php?delete=$row[id]'><i class='fa fa-trash'></i></a></span></div>";
+        echo "<div class='task'><a href='dashboard.php?complete=true'><input href='dashboard.php?complete=true' class='counted' type='checkbox' name=".$row['id']." ></a><span class='task-text'> ".$row['task']. "</span>  <span class='complete-status'<h6>Complete</h6></span> <span class='navbar-right'><a href='dashboard.php?edit=$row[id]'><i class='fa fa-edit'></i></a> <a href='dashboard.php?delete=$row[id]'><i class='fa fa-trash'></i></a></span></div>";
 
     }
     }
@@ -120,7 +120,7 @@
 <body>
     <div class="container-fluid">
         <div class="header-dashboard row">
-            <a href="dashboard.php"><h1>DASHBOARD</h1></a>
+            <a id="dashboard_link" href="dashboard.php"><h1>DASHBOARD</h1></a>
             <span class="navbar-right"><h3 ><?php echo $_SESSION['username']; ?> | <a href="dashboard.php?logout=true">LOG OUT</a></h3></span>
         </div>
         <div class="row">
