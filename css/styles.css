@@ -97,7 +97,7 @@ th{
 }
 
 .task{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .task-space{
     padding: 0 4em 0 4em;
@@ -241,8 +241,3 @@ th{
     border-radius: 10px;
 }
 
-.complete-status{
-    font-size:0.4em;
-    color:rgb(1, 60, 75);
-    display: none;
-}
