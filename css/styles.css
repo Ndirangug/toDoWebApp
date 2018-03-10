@@ -33,7 +33,7 @@ th{
 }
 
 .error{
-    color: red;
+    color: rgb(124, 46, 46);
 }
 .success{
     color: green;

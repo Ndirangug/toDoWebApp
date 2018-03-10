@@ -59,6 +59,28 @@
                             </form>
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <?php
+    if (isset($_POST['register'])) {
+       extract($_POST);
+    
+       $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+       $query = "INSERT INTO 6470users (username, password, phone) VALUES ('$username', '$hashedPassword', '$phone')";
+       $insertResult = mysqli_query($conn, $query);
+
+       if (!$insertResult) {
+         echo "<p class='error'>Registration Failed: .".mysqli_error($conn)." <a href='login.php'>Log in Instead</a></p>";
+       }
+
+       else{
+           echo "<p class='success'>Registration Succcess</p>";
+           header("location:login.php");
+       }
+    }
+?>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -70,22 +92,3 @@
 </body>
 </html>
 
-<?php
-    if (isset($_POST['register'])) {
-       extract($_POST);
-    
-       $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-       $query = "INSERT INTO 6470users (username, password, phone) VALUES ('$username', '$hashedPassword', '$phone')";
-       $insertResult = mysqli_query($conn, $query);
-
-       if (!$insertResult) {
-         echo "<p class='error'>Registration Failed: .".mysqli_error($conn)."</p>";
-         header("location:register.php");
-       }
-
-       else{
-           echo "<p class='success'>Registration Succcess</p>";
-           header("location:login.php");
-       }
-    }
-?>

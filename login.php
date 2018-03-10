@@ -51,18 +51,9 @@
                     <tr>
                         <td><a href="forgot_password.php">Forgot Password</a></td>
                     </tr>
-                </tbody>
-            </table>
-        </div>
-        
-    </div>
-
-    <script src="bootstrap/js/jquery.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
-</body>
-</html>
-
-<?php
+                    <tr>
+                        <td>
+                            <?php
 
 
     if (isset($_POST['login'])) {
@@ -94,14 +85,14 @@
             }
 
             else{
-            echo "<p>Invalid password entered<a href='login.php'>Try Again</a></p>";
+            echo "<p class='error'> Invalid password entered<a href='login.php'>Try Again</a></p>";
            
             }
         }
 
         else{
            
-            echo "<p>Invalid username<a href='login.php'>Try Again</a></p>";
+            echo "<p class='error'>Invalid username<a href='login.php'>Try Again</a></p>";
             
             
         }
@@ -113,4 +104,18 @@
 
     session_write_close();
 ?>
+
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
 
