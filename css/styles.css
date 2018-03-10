@@ -99,3 +99,22 @@ th{
     margin-left: 1em;
     font-size: 0.8em;
 }
+
+#edit{
+   width:50%;
+    margin:auto;
+    border:0.2em solid rgb(0, 60, 78);
+    padding: 2em;
+}
+
+.container{
+    width:50%;
+    margin:auto;
+    border:0.2em solid rgb(0, 60, 78);
+    padding: 2em;
+}
+
+.searchinput .form-control{
+    width:60%;
+    display:inline;
+}

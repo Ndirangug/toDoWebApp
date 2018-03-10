@@ -16,11 +16,13 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="edit">
+    <div class="container">
+    <div id="edit" style="width:50%; margin:auto; border:0.2em solid rgb(0, 60, 78);padding: 2em;"  class="edit img-rounded">
         <form action="edit.php" method="post" role="form">
             <input type="text" class="form-control" placeholder="type task here..." name="task">
-            <input type="submit" value="SUBMIT CHANGES" class="btn btn-default" name="update">
+            <input style="margin-top:1em;" type="submit" value="SUBMIT CHANGES" class="btn btn-default" name="update">
         </form>
+    </div>
     </div>
 </body>
 </html>
