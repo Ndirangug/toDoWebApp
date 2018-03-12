@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Reset Password</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="favicon" href="favicon.ico">
     <link rel="stylesheet" href="bootstrap/fontawesome/css/fontawesome-all.css">
     <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css">
