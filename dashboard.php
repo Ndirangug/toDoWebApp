@@ -92,10 +92,12 @@
             header("location:dashboard.php");
         }
        }
-
+    
        if (isset($_GET['edit'])) {
           $_SESSION['edit_id'] = $_GET['edit'];
-          header("location:edit.php?taskEdit=");
+          header("location:edit.php?taskEdit=$_SESSION[edit_id]");
+
+         
        }
 
        session_write_close();

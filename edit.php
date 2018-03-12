@@ -2,6 +2,22 @@
     include("includes/connection.php");
     session_start();
 
+    $taskItself;
+
+     $taskQuery = "SELECT * FROM tasks WHERE id = '$_GET[taskEdit]' ";
+          $taskResult = mysqli_query($conn, $taskQuery);
+
+          if (!$taskResult) {
+              die("Query error ".mysqli_error($conn));
+          }
+
+          else {
+              $taskFetched = mysqli_fetch_assoc($taskResult);
+              $taskItself = $taskFetched['task'];
+
+              
+          }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +37,7 @@
     
     <div id="edit"   class="edit img-rounded">
         <form action="edit.php" method="post" role="form">
-            <input type="text" class="form-control" placeholder="type task here..." name="task">
+            <input type="text" class="form-control" <?php echo "value ='". $taskItself."'"; ?> placeholder="type task here..." name="task">
             <input style="margin-top:1em;" type="submit" value="SUBMIT CHANGES" class="btn btn-default" name="update">
         </form>
     </div>
