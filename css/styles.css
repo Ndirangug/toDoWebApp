@@ -6,7 +6,9 @@
 }
 
 .wrapper{
-    padding-top: 7em;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    
 }
 
 th, td, label{
@@ -23,13 +25,14 @@ th{
     width:5.5em;
     height:5.5em;
     position:absolute;
-    left: 42em;
+    left: 45em;
     top:5.8em;
     border:0.2em solid rgb(0, 60, 78);
 }
 
 .wrapper-forgot #register_inset{
     top:2.8em;
+
 }
 
 .error{
@@ -162,6 +165,7 @@ th{
     background-color: rgba(0, 0, 0, 0.838);
     width:100%;
     height: 100%;
+
 }
 
 .register thead, .register-forgot thead{
@@ -219,13 +223,15 @@ th{
 }
 
 .wrapper-forgot{
-    padding-top: 2em;
+    padding-top: 4em;
+    padding-bottom: 14em;
 }
 
 .tint{
      background-color: rgba(0, 0, 0, 0.808);
      height:100%;
      padding-top: 8em;
+     
 }
 
 #dashboard_link:active, #dashboard_link:hover, #dashboard_link:focus{
